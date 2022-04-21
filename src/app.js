@@ -44,7 +44,19 @@ function displayTemperature (response) {
     iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function search(city) {
 let apiKey = "c0efafb3b4678b54c983a9d3289a0c0a";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Ibadan&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
- axios.get(apiUrl).then(displayTemperature);
+axios.get(apiUrl).then(displayTemperature);
+}
+
+function submit(event) {
+    event.preventDefault();
+    let cityInput = document.querySelector("#search-city");
+    search(cityInput.value);
+}
+search("Ibadan")
+
+ let form = document.querySelector("#search-form");
+ form.addEventListener("submit", submit)
