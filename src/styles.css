@@ -7,7 +7,7 @@ h1{
     font-size: 24px;
     font-weight: 200;
     line-height: 28px;
-    color: #878787;
+    color: black;
 }
 ul {
 margin: 0;
@@ -23,16 +23,36 @@ li {
   font-size: 17px;
   line-height: 19px;
 }
-.weather-app-wrapper{
-max-width: 600px;
- margin: 30px auto;
-}
 .weather-app {
   background-image: url("https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 600px;
+ margin: 30px auto;
   border: 1px solid #dadde1;
   padding: 20px;
   border-radius: 10px;
+}
+.header{
+    margin: 20px 0;
+}
+.weather img{
+    color: black;
+    margin-right: 2px;
+    height: 64px;
+    width: 64px;
+}
+.weather strong{
+    color: black;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+}
+.units{
+    position: relative;
+    font-size: 15px;
+    color: black;
+   top:-32px;
+    
 }
 
