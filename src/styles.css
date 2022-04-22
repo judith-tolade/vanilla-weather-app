@@ -58,4 +58,10 @@ text-transform: capitalize;
    top:-32px;
     
 }
-
+.active{
+    color: #000;
+    cursor: default;
+}
+.active:hover{
+    text-decoration: none;
+}
