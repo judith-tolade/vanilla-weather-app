@@ -65,3 +65,6 @@ text-transform: capitalize;
 .active:hover{
     text-decoration: none;
 }
+small{
+    text-align: center;
+}
