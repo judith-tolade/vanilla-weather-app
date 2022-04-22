@@ -32,7 +32,9 @@ function displayTemperature (response) {
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#icon");
 
-    temperatureSelector.innerHTML= Math.round(response.data.main.temp);
+    celsiusTemperature = response.data.main.temp;
+
+    temperatureSelector.innerHTML= Math.round(celsiusTemperature);
     citySelector.innerHTML= response.data.name;
     descriptionSelector.innerHTML= response.data.weather[0].description;
     humiditySelector.innerHTML = response.data.main.humidity;
@@ -56,7 +58,30 @@ function submit(event) {
     let cityInput = document.querySelector("#search-city");
     search(cityInput.value);
 }
-search("Ibadan")
+
+function displayFahTemperature(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    let fahTemperature = (temperatureElement.innerHTML * 9) / 5 +32;
+    temperatureElement.innerHTML = Math.round(fahTemperature);
+}
+function displayCelTemperature(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
  let form = document.querySelector("#search-form");
  form.addEventListener("submit", submit)
+
+ let fahrenheitConversion = document.querySelector("#fahrenheit-link");
+fahrenheitConversion.addEventListener("click", displayFahTemperature);
+ 
+ let celsiusConversion = document.querySelector("#celsius-link");
+ celsiusConversion.addEventListener("click", displayCelTemperature);
+ ;
+
+
+search("Ibadan");
