@@ -68,3 +68,23 @@ text-transform: capitalize;
 small{
     text-align: center;
 }
+.weather.forecast{
+    margin-top: 30px;
+    text-align: center;
+    color: #000;
+}
+.forecast-date{
+    font-size: 16px;
+    opacity: 0.5;
+}
+.forecast-temperature-min{
+    opacity: 0.5;
+}
+
+.forecast-temperature{
+    font-size: 12px;
+}
+
+
+
+
