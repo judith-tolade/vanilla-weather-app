@@ -22,6 +22,30 @@ function formatDate(timestamp){
     return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+
+    let days = ["Thur", "Fri", "Sat", "Sun", "Mon"] ;
+
+    let forecastHTML =`<div class="row">`;
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + 
+        `
+         <div class="col">
+            <div class="forecast-date"> ${day}</div>
+              <i class="fa-solid fa-cloud"></i>
+              <div class="forecast-temperature">
+              <span class="forecast-temperature-max">36 &deg;C</span>
+              <span class="forecast-temperatusssre-min">24 &deg;C </span>
+              </div>
+          </div>
+        `;
+    });
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+    
+}
+
 
 function displayTemperature (response) {
     let temperatureSelector= document.querySelector("#temperature");
@@ -89,3 +113,4 @@ fahrenheitLink.addEventListener("click", displayFahTemperature);
 
 
 search("Ibadan");
+displayForecast();
