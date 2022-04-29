@@ -1,5 +1,5 @@
 body {
-  background-color: #a1dce7;
+  background-color: rgba(139, 192, 216, 0.73) ;
   font-family: Arial, sans-serif;
 }
 
@@ -13,7 +13,9 @@ ul {
 margin: 0;
 padding: 0;
 }
-
+li.first-letter{
+text-transform: capitalize;
+}
 li {
   list-style: none;
   margin: 0;
@@ -22,10 +24,9 @@ li {
   font-weight: 100;
   font-size: 17px;
   line-height: 19px;
+  text-transform: capitalize;
 }
-li.first-letter{
-text-transform: capitalize;
-}
+
 .weather-app {
   background-image: url("https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat: no-repeat;
@@ -35,6 +36,7 @@ text-transform: capitalize;
   border: 1px solid #dadde1;
   padding: 20px;
   border-radius: 10px;
+
 }
 .header{
     margin: 20px 0;
@@ -67,7 +69,9 @@ text-transform: capitalize;
     text-decoration: none;
 }
 small{
-    text-align: center;
+    text-align: start;
+    line-height: 21px;
+    text-size-adjust: 100%;
 }
 .weather.forecast{
     margin-top: 30px;
@@ -76,12 +80,24 @@ small{
 }
 .forecast-date{
     font-size: 16px;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 .forecast-temperature-min{
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .forecast-temperature{
     font-size: 12px;
+}
+.col-2 {
+  box-shadow: 4px 4px 4px rgba(102, 101, 101, 0.1);
+  border-radius: 4px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.col-2:hover {
+  background-color: rgba(241, 239, 239, 0.5);
 }
